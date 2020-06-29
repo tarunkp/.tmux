@@ -3,6 +3,38 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+### Edits by tarunkp
+
+# tmux (terminal multiplexer) configuration file
+
+# set -> alias for set-option
+# set -g -> set global option
+# set -a -> For options expecting a string or a style, value is appended to the existing setting.
+# Ex.  set -g status-style "bg=red"
+#      set -ag status-style "fg=blue"
+# setw -> alias for set-window-option
+
+
+# bind-key [-cnr] [-t mode-table] [-T key-table] key command [arguments]
+# -t vi-edit|emacs-edit|vi-choice|emacs-choice|vi-copy|emacs-copy
+# -T prefix(default) root(without any prefix) user-defined
+# -c command mode (without -c normal mode)
+# -n alias for -T root (bind key without any prefix, not recommended to use)
+# -r Allow multiple commands to be entered without pressing the prefix-key again in the specified milliseconds(default 500ms) (set -g repeat-time 1000)
+
+# To unbing all the key mappings
+# unbind-key -a
+
+# Setting the prefix from C-b to C-z (Ctrl+z) and free the original Ctrl-b prefix keybinding
+set -g prefix C-z
+unbind C-b
+# C-z C-z for last active window
+bind-key C-z last-window
+# Ensure that we can send Ctrl-z to other apps, press C-z Z (C-z shift-z)
+bind-key Z send-prefix
+
+
+
 
 # -- navigation ----------------------------------------------------------------
 
