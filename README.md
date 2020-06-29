@@ -20,12 +20,12 @@ existing `~/.tmux.conf` first)
 
 ```
 $ cd
-$ git clone https://github.com/gpakosz/.tmux.git
+$ git clone https://github.com/tarunkp/.tmux.git
 $ ln -s -f .tmux/.tmux.conf
-$ cp .tmux/.tmux.conf.local .
+$ ln -s -f .tmux/.tmux.conf.local
 ```
 
-Then proceed to [customize] your `~/.tmux.conf.local` copy.
+Then proceed to [customize] ~/.tmux.conf.local.
 
 [customize]: #enabling-the-powerline-look
 

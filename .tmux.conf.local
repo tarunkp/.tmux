@@ -33,7 +33,17 @@ bind-key C-z last-window
 # Ensure that we can send Ctrl-z to other apps, press C-z Z (C-z shift-z)
 bind-key Z send-prefix
 
-
+# Make window/tab commnds to work without prefix
+bind -n S-down new-window
+bind -n S-left prev
+bind -n S-right next
+bind -n M-Left  select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up    select-pane -U
+bind -n M-Down  select-pane -D
+#bind -n M-left swap-window -t -1
+#bind -n M-right swap-window -t +1
+#bind-key -n C-j detach
 
 
 # -- navigation ----------------------------------------------------------------
